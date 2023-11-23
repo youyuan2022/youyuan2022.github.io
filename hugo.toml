@@ -70,7 +70,7 @@ theme = "FeelIt"
     name = "Categories"
     url = "/categories/"
     title = ""
-    weight = 3
+    weight = 3                                                   
 
 
 # Markup related configuration in Hugo
