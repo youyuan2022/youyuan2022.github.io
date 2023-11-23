@@ -1,0 +1,81 @@
+baseURL = "http://example.org/"
+defaultContentLanguage = "en"
+languageCode = "en"
+title = "You Yuan"
+theme = "FeelIt"
+
+[params]
+  # FeelIt theme version
+  version = "1.0.X"
+
+  [params.home]
+    rss = 10
+    # Home page profile
+    [params.home.profile]
+      enable = true
+      # Gravatar Email for preferred avatar in home page
+      gravatarEmail = ""
+      # URL of avatar shown in home page
+      avatarURL = "/images/avatar.png"
+      # FeelIt CHANGED | 0.2.7
+      title = "You Yuan"
+      # subtitle shown in home page
+      subtitle = "Welcome to my blog"
+      # whether to use typeit animation for subtitle
+      typeit = true
+      # whether to show social links
+      social = true
+      # FeelIt NEW | 0.2.0
+      disclaimer = ""
+
+  [params.social]
+    # [params.social.GitHub]
+    # # weight when arranging icons (the greater the weight, the later the icon is positioned)
+    # weight = 1
+    # # your social ID
+    # id = "youyuan2022"
+    # # prefix of your social link
+    # prefix = "https://github.com/"
+    # # content hovering on the icon
+    # title = "Github"
+    # Icon = "/images/avatar.png"
+    github = "youyuan2022"
+    bilibili = "1126054433"
+
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # you can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # you can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    name = "Posts"
+    url = "/posts/"
+    # title will be shown when you hover on this menu link
+    title = "posts"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "Tags"
+    url = "/tags/"
+    title = "tags"
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "Categories"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/khusika/FeelIt/issues/158)
+    noClasses = false
