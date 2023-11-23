@@ -75,10 +75,11 @@ from aip import AipOcr：AipOcr导入了AipOcr类，用于接入百度OCR服务�
 
 client = AipOcr(APP_ID, API_KEY, SECRET_KEY)：凭借APP_ID、API_KEY和SECRET_KEY创建一个AipOcr的客户端实例
 
+```python
 client.setConnectionTimeoutInMillis(5000)
 
 client.setSocketTimeoutInMillis(5000)
-
+```
 这两行设置了连接超时和数据传输超时的时间限制，避免程序长时间挂起等待响应。
 
 def get_file_content(filePath):该函数以二进制模式读取图片文件的内容
