@@ -7,17 +7,17 @@ author = "youyuan"
 
 +++
 
-# Flask ¿ìËÙÈëÃÅÖ¸ÄÏ
+# Flask å¿«é€Ÿå…¥é—¨æŒ‡å—
 
-## ¿ªÆôµ÷ÊÔÄ£Ê½
+## å¼€å¯è°ƒè¯•æ¨¡å¼
 ```python
 flask --app hello run --debug
 ```
 
-## Â·ÓÉ
-Ê¹ÓÃ `route()` ×°ÊÎÆ÷°Ñº¯Êı°ó¶¨µ½ URL¡£Â·ÓÉÓÃÓÚ½«ÇëÇóµÄ URL Ó³Éäµ½¾ßÌåµÄ´¦Àíº¯Êı¡£
+## è·¯ç”±
+ä½¿ç”¨ `route()` è£…é¥°å™¨æŠŠå‡½æ•°ç»‘å®šåˆ° URLã€‚è·¯ç”±ç”¨äºå°†è¯·æ±‚çš„ URL æ˜ å°„åˆ°å…·ä½“çš„å¤„ç†å‡½æ•°ã€‚
 
-### »ù±¾Â·ÓÉ
+### åŸºæœ¬è·¯ç”±
 ```python
 @app.route('/')
 def index():
@@ -28,8 +28,8 @@ def hello():
     return 'Hello, World'
 ```
 
-### ¶¯Ì¬Â·ÓÉ
-¶¯Ì¬±ä»¯ URL µÄÄ³Ğ©²¿·Ö¡£
+### åŠ¨æ€è·¯ç”±
+åŠ¨æ€å˜åŒ– URL çš„æŸäº›éƒ¨åˆ†ã€‚
 ```python
 @app.route('/user/<username>')
 def show_user_profile(username):
@@ -40,7 +40,7 @@ def show_post(post_id):
     return f'Post {post_id}'
 ```
 
-### Î¨Ò»µÄ URL/ÖØ¶¨ÏòĞĞÎª
+### å”¯ä¸€çš„ URL/é‡å®šå‘è¡Œä¸º
 ```python
 @app.route('/projects/')
 def projects():
@@ -51,7 +51,7 @@ def about():
     return 'The about page'
 ```
 
-## Ê¹ÓÃ url_for ¹¹½¨ URL
+## ä½¿ç”¨ url_for æ„å»º URL
 ```python
 @app.route('/hello')
 def hello():
@@ -64,14 +64,14 @@ def about():
     return 'The about page'
 ```
 
-### ¶¯Ì¬µ÷ÕûÂ·ÓÉ
+### åŠ¨æ€è°ƒæ•´è·¯ç”±
 ```python
 @app.route('/hello_world')
 def hello():
     return 'Hello, World'
 ```
 
-## Â·ÓÉÓ³Éäµ½Í¬Ò»¸öÊÓÍ¼º¯Êı
+## è·¯ç”±æ˜ å°„åˆ°åŒä¸€ä¸ªè§†å›¾å‡½æ•°
 ```python
 @app.route('/hello/')
 @app.route('/hello/<name>')
@@ -79,7 +79,7 @@ def hello(name=None):
     return render_template('hello.html', name=name)
 ```
 
-### Jinja2 Ä£°åÊ¾Àı
+### Jinja2 æ¨¡æ¿ç¤ºä¾‹
 ```html
 <body>
 {% if name %}
@@ -90,18 +90,18 @@ def hello(name=None):
 </body>
 ```
 
-## ²Ù×÷ÇëÇóÊı¾İ
+## æ“ä½œè¯·æ±‚æ•°æ®
 ```python
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
-    print('ÇëÇóÂ·¾¶£º	', request.path)
-    print('ÇëÇó·½·¨£º	', request.method)
+    print('è¯·æ±‚è·¯å¾„ï¼š	', request.path)
+    print('è¯·æ±‚æ–¹æ³•ï¼š	', request.method)
     print(dir(request))
     return render_template('hello.html', name=name)
 ```
 
-### µÇÂ¼´¦Àí
+### ç™»å½•å¤„ç†
 ```python
 @app.route('/login', methods=['POST', 'GET'])
 def login():
@@ -109,6 +109,6 @@ def login():
     if request.method == 'POST':
         print('username:	', request.form['username'])
         print('password:	', request.form['password'])
-        return {'status': True, 'message': 'µÇÂ½³É¹¦'}
+        return {'status': True, 'message': 'ç™»é™†æˆåŠŸ'}
     return render_template('login.html', error=error)
 ```
